@@ -1,15 +1,13 @@
-import Message from "./components/Message/Message.jsx";
 import React from "react";
-import Wrapper from "./components/Wrapper/Wrapper.jsx";
+import SmileList from "./components/SmileVote/SmileList.jsx";
 
-class App extends React.Component{
+
+class App extends React.Component {
     render() {
         return (
             <div>
+                <SmileList/>
 
-                <Message/>
-                <Message/>
-                <Wrapper />
 
             </div>
         )
