@@ -1,15 +1,16 @@
 import React from "react";
+import "./SmileListStyle.css"
 
-class SmileItem extends React.Component{
+class SmileItem extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
-        return(
-            <div>
-                <h3>{this.props.smile.smile}</h3>
+        return (
+            <div onClick={this.props.onVote} className="smile-item">
+                <h3>{this.props.smile}</h3>
                 <br/>
-                <button onClick={() => {}}>{this.props.smile.votes}</button>
+                <button>{this.props.votes}</button>
             </div>
         )
     }
