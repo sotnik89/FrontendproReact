@@ -28,27 +28,32 @@
     gap: 2px;
     cursor: pointer;
 }
-.smile-item:hover{
-    transform: scale(150%);
-}
 .smile-item h3 {
-    font-size: 40px;
-    margin: 0;
+    font-size:40px;
+    transition: transform 0.3s ease-in-out;
+}
+.smile-item h3:hover {
+    transform: scale(170%);
 }
 .smile-item button {
     border: none;
     background: none;
-    font-size: 20px;
+    font-size: 14px;
     font-style: italic;
     cursor: pointer;
 }
-.results-container h2, .results-container h3 {
-    margin: 20px 0;
+.results-container  {
+
 }
 .winner-display {
-    font-size: 60px;
+    font-size: 40px;
     margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
 }
+.winner-display:hover{
+    transform: scale(170%);
+}
+
 .votes-count {
     font-style: italic;
     font-size: 18px;

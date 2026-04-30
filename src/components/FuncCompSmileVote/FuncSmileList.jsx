@@ -7,7 +7,6 @@ import "./FuncSmileStyle.css"
 function FuncSmileList(){
     const [title] = useState("Голосування за найкращий смайлик");
     const [showResult, setShowResult] = useState(false);
-
     const [smiles, setSmiles] = useState(() => {
         const savedSmiles = localStorage.getItem("smiles_votes");
         return savedSmiles ? JSON.parse(savedSmiles) : [
@@ -18,9 +17,6 @@ function FuncSmileList(){
             { id: 5, smile: "😍", votes: 0 },
         ];
     });
-    // useEffect(() => {
-    //     localStorage.setItem("smiles_votes", JSON.stringify(smiles));
-    // }, [smiles]);
     const handleVote = (id) => {
         setSmiles(smiles =>
             smiles.map(smile =>

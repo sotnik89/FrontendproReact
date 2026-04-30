@@ -3,8 +3,8 @@ import "./FuncSmileStyle.css"
 
 function FuncSmileItem({smile, votes, onVote}){
     return(
-        <div onClick={onVote} className="smile-item">
-            <h3>{smile}</h3>
+        <div  className="smile-item">
+            <h3 onClick={onVote}>{smile}</h3>
             <br/>
             <button>{votes}</button>
         </div>

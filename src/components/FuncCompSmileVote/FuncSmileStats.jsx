@@ -13,5 +13,4 @@ function FuncSmileStats({ smiles }){
         </div>
     )
 }
-
 export default FuncSmileStats
