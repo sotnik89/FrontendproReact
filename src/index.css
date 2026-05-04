@@ -1,11 +1,10 @@
-:root {
-
-}
 
 body {
-  margin: 0;
+background-color: rgba(65,163,15,0.5);
 }
 
 #root {
-  margin: 0 auto;
+
 }
+
+
