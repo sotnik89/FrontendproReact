@@ -1,19 +1,23 @@
-import React from "react";
+import { Routes, Route } from 'react-router-dom'
+
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import MyApp from "./pages/MyApp/MyApp.jsx";
+import Home from "./pages/Home/Home.jsx";
+import Contacts from "./pages/Contacts/Contacts.jsx";
+import AboutUs from "./pages/AboutUs/AboutUs.jsx";
 
-class App extends React.Component{
-  render() {
+
+export default function App(){
     return(
         <div>
-          <Header></Header>
-          <MyApp></MyApp>
-          <Footer></Footer>
-
+            <Header />
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/contacts' element={<Contacts />} />
+                    <Route path='/about us' element={<AboutUs />} />
+                </Routes>
+            <Footer />
         </div>
     )
-  }
 }
 
-export default App

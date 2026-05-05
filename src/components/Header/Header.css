@@ -1,0 +1,24 @@
+.header-light{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+.header-dark{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: black;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.btn{
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+    padding: 3px 15px;
+    border: none;
+    cursor: pointer;
+}

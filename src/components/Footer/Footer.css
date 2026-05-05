@@ -1,0 +1,24 @@
+.footer-light{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+.footer-dark{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;                   /* Відстань між текстом і кнопкою */
+    width: 100%;
+    background: black;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.btn{
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+    padding: 3px 15px;
+    border: none;
+    cursor: pointer;
+}
