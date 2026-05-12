@@ -4,6 +4,7 @@ import React from "react";
 
 
 import FormRegular from "./pages/FormRegular/FormRegular.jsx";
+import FormFormik from "./pages/FormFormik/FormFormik.jsx";
 
 class App extends React.Component{
     render() {
@@ -11,6 +12,7 @@ class App extends React.Component{
             <div>
                 <Routes>
                     <Route path={"/form-regular"} element={<FormRegular />} />
+                    <Route path={"/form-formik"} element={<FormFormik />} />
                 </Routes>
             </div>
         )
