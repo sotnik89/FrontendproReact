@@ -1,16 +1,17 @@
-import Message from "./components/Message/Message.jsx";
+import { Routes, Route } from 'react-router-dom';
+
 import React from "react";
-import Wrapper from "./components/Wrapper/Wrapper.jsx";
+
+
+import FormRegular from "./pages/FormRegular/FormRegular.jsx";
 
 class App extends React.Component{
     render() {
         return (
             <div>
-
-                <Message/>
-                <Message/>
-                <Wrapper />
-
+                <Routes>
+                    <Route path={"/form-regular"} element={<FormRegular />} />
+                </Routes>
             </div>
         )
     }
