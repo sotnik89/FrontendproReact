@@ -1,0 +1,39 @@
+.todo_container{
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.todo_container ul{
+    list-style: none;
+    padding: 0;
+}
+.todo_container h2{
+    color: white;
+    text-align:center;
+}
+
+.todo_container ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.clear_all{
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 15px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.button-delete{
+    background-color: #ff9999;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
