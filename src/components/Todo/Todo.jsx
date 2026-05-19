@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addTodoAction, deleteTodoAction, clearTodosAction } from '../../store/todoReducer';
+import { addTodoAction, deleteTodoAction, clearTodosAction } from '../../store/slice/todoSlice.js';
 
 import './Todo.css'
 
 export default function Todo() {
     const [inputValue, setInputValue] = useState('');
 
-    const todos = useSelector(state => state.todos);
+    const todos = useSelector(state => state.todos.todos);
     const dispatch = useDispatch();
 
     const handleAdd = (e) => {

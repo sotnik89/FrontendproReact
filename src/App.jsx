@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import Todo from './components/Todo/Todo.jsx';
 
 function App() {
-    const totalTodos = useSelector(state => state.todos.length);
+    const totalTodos = useSelector(state => state.todos.todos.length);
     return (
         <div className='app_container'>
             <main>
