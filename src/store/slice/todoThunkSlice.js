@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import { getTodos, getTodosById, createTodo, deleteTodo } from "../thunks/todoThunk.js";
 
 const initialState = {
-    items: [], // 2. Исправили todos на items, чтобы совпадало с остальным кодом
+    items: [],
     selectedTask: null,
-    loading: false, // Явно объявляем, чтобы избежать warning-ов в консоли
+    loading: false,
     error: null
 }
 
@@ -24,7 +24,8 @@ const todoThunkSlice = createSlice({
             })
             .addCase(getTodos.fulfilled, (state, action) => {
                 state.loading = false;
-                state.items = action.payload
+                const shuffled = [...action.payload].sort(() => 0.5 - Math.random());
+                state.items = shuffled.slice(0, 5);
             })
             .addCase(getTodos.rejected, (state, action) => {
                 state.loading = false;
@@ -48,7 +49,10 @@ const todoThunkSlice = createSlice({
             })
             .addCase(createTodo.fulfilled, (state, action) => {
                 state.loading = false;
-                state.items.unshift(action.payload);
+                const newTodo = { ...action.payload, id: Date.now() };
+                state.items.unshift(newTodo);
+
+                // state.items.unshift(action.payload);
             })
             .addCase(createTodo.rejected, (state, action) => {
                 state.loading = false;
@@ -68,7 +72,6 @@ const todoThunkSlice = createSlice({
             })
     }
 })
-
 export const {
     clearSelectedTask
 } = todoThunkSlice.actions;

@@ -45,7 +45,7 @@ export default function Todo() {
                 {todos.map((todo, index) => (
                     <li key={todo.id}
                     >
-                        <span className="todo-number">{index + 1}. </span>
+                        <span className="todo-number">{index + 1}.</span>
                         <span>{todo.text}</span>
                         <button
                             className='button-delete'
