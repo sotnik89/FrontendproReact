@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
     todos: []
 };
@@ -20,7 +19,6 @@ const todoSlice = createSlice({
         }
     }
 });
-
 export const {
     addTodoAction,
     deleteTodoAction,
@@ -28,8 +26,3 @@ export const {
 } = todoSlice.actions
 
 export default todoSlice.reducer;
-
-// export const { addTodoAction, deleteTodoAction, clearTodosAction } = todoSlice.actions;
-//
-// // Экспортируем редюсер для подключения в store
-// export const todoReducer = todoSlice.reducer;
