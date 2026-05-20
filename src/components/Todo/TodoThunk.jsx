@@ -2,6 +2,8 @@ import  { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTodos, createTodo, deleteTodo } from "../../store/thunks/todoThunk.js";
 
+import './Todo.css'
+
 export default function TodoThunk() {
     const [inputValue, setInputValue] = useState('');
     const dispatch = useDispatch();
