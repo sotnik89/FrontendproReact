@@ -6,7 +6,6 @@ import './Todo.css'
 
 export default function Todo() {
     const [inputValue, setInputValue] = useState('');
-
     const todos = useSelector(state => state.todos.todos);
     const dispatch = useDispatch();
 

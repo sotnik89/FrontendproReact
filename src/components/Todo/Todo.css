@@ -3,7 +3,6 @@
     max-width: 400px;
     margin: 0 auto;
 }
-
 .todo_container ul{
     list-style: none;
     padding: 0;
@@ -12,7 +11,6 @@
     color: white;
     text-align:center;
 }
-
 .todo_container ul li{
     display: flex;
     justify-content: space-between;
@@ -24,7 +22,13 @@
     color: #dddddd;
     background-color: rgba(255, 255, 255, 0.05);
 }
-
+.todo_container ul li span:nth-child(2){
+    flex: 1;
+    min-width: 0;
+    word-break: break-all;
+    text-align: left;
+    padding-right: 15px;
+}
 .button-clear_all{
     background-color: transparent;
     color: #ff4d4d;
@@ -42,7 +46,6 @@
     box-shadow: 7px 4px rgb(247, 33, 65);
     border: 5px solid black;
 }
-
 .button-delete{
     background-color: transparent;
     border: 2px solid #ff4d4d;
@@ -50,15 +53,14 @@
     padding: 6px 15px;
     cursor: pointer;
     color: white;
+    flex-shrink: 0;
 }
-
 form {
     display: flex;
     justify-content: space-around;
     margin: 20px auto;
     width: 100%;
 }
-
 .button-create {
     background-color: #ff4d4d;
     color: #121212;
@@ -69,7 +71,6 @@ form {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .button-create:hover {
     background-color: greenyellow ;
     color: #9707b6;
@@ -83,4 +84,7 @@ form {
     border-radius: 8px;
     background-color: #1a1a1a;
     color: white;
+}
+.todo-number{
+    padding-right: 16px;
 }
