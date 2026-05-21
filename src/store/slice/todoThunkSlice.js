@@ -51,8 +51,6 @@ const todoThunkSlice = createSlice({
                 state.loading = false;
                 const newTodo = { ...action.payload, id: Date.now() };
                 state.items.unshift(newTodo);
-
-                // state.items.unshift(action.payload);
             })
             .addCase(createTodo.rejected, (state, action) => {
                 state.loading = false;
@@ -75,5 +73,4 @@ const todoThunkSlice = createSlice({
 export const {
     clearSelectedTask
 } = todoThunkSlice.actions;
-
 export default todoThunkSlice.reducer;
