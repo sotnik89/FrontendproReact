@@ -2,17 +2,13 @@ import  { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTodos, createTodo, deleteTodo } from "../../store/thunks/todoThunk.js";
 
-
 export default function TodoThunk() {
     const [inputValue, setInputValue] = useState('');
 
     const dispatch = useDispatch();
 
-    // Отримуємо дані зі сховища (якщо у store.js ви обрали Варіант 1, використовуйте state.todoThunk)
-    // Зверніть увагу: у вашому thunk slice масив називається items, а не todos
     const { items: todos, loading, error } = useSelector(state => state.todoThunk);
 
-    // Завантажуємо завдання з сервера при завантаженні сторінки
     useEffect(() => {
         dispatch(getTodos());
     }, [dispatch]);
@@ -21,7 +17,6 @@ export default function TodoThunk() {
         e.preventDefault();
         if (!inputValue.trim()) return;
 
-        // Для сервера JSONPlaceholder потрібні поля title та completed
         const newTodo = {
             title: inputValue,
             completed: false,
@@ -52,17 +47,12 @@ export default function TodoThunk() {
 
             {todos && todos.length > 0 ? (
                 <ul>
-                    {/* Виводимо перші 5 завдань із масиву */}
                     {todos.slice(0, 5).map((todo, index) => (
                         <li key={todo.id}>
                             <span className="todo-number">{index + 1}. </span>
-                            <span
-                                // style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
-                            >
+                            <span>
                                 {todo.title}
                             </span>
-
-                            {/* ТЕПЕР КНОПКА ВИДАЛЕННЯ ПРАЦЮЄ */}
                             <button
                                 className='button-delete'
                                 onClick={() => dispatch(deleteTodo(todo.id))}

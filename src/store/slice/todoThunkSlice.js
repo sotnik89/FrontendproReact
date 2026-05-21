@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import { getTodos, getTodosById, createTodo, deleteTodo } from "../thunks/todoThunk.js";
 
 const initialState = {
-    items: [], // 2. Исправили todos на items, чтобы совпадало с остальным кодом
+    items: [],
     selectedTask: null,
-    loading: false, // Явно объявляем, чтобы избежать warning-ов в консоли
+    loading: false,
     error: null
 }
 
