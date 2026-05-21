@@ -1,19 +1,11 @@
-import Message from "./components/Message/Message.jsx";
-import React from "react";
-import Wrapper from "./components/Wrapper/Wrapper.jsx";
+import AboutMe from "./pages/AboutMe/AboutMe.jsx"
 
-class App extends React.Component{
-    render() {
-        return (
-            <div>
-
-                <Message/>
-                <Message/>
-                <Wrapper />
-
-            </div>
-        )
-    }
+function App() {
+    return (
+        <div>
+            <AboutMe/>
+        </div>
+    )
 }
 
 export default App
