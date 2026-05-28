@@ -15,7 +15,8 @@ export default defineConfig([
     ],
     languageOptions: {
       globals: globals.browser,
-      parserOptions: { ecmaFeatures: { jsx: true } },
+      jest: true,
+          parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
 ])
